@@ -1,0 +1,102 @@
+
+/*
+### Color Theme Swatches in Hex
+.AMAZE-|-Honey-Co.-1-hex { color: #F2A922; }
+.AMAZE-|-Honey-Co.-2-hex { color: #D97904; }
+.AMAZE-|-Honey-Co.-3-hex { color: #D9C2A7; }
+.AMAZE-|-Honey-Co.-4-hex { color: #BF5B04; }
+.AMAZE-|-Honey-Co.-5-hex { color: #732C02; }
+
+### Color Theme Swatches in RGBA
+.AMAZE-|-Honey-Co.-1-rgba { color: rgba(242, 169, 33, 1); }
+.AMAZE-|-Honey-Co.-2-rgba { color: rgba(216, 121, 4, 1); }
+.AMAZE-|-Honey-Co.-3-rgba { color: rgba(216, 194, 166, 1); }
+.AMAZE-|-Honey-Co.-4-rgba { color: rgba(191, 91, 3, 1); }
+.AMAZE-|-Honey-Co.-5-rgba { color: rgba(114, 43, 2, 1); }
+
+### Color Theme Swatches in HSLA
+.AMAZE-|-Honey-Co.-1-hsla { color: hsla(39, 89, 54, 1); }
+.AMAZE-|-Honey-Co.-2-hsla { color: hsla(33, 96, 43, 1); }
+.AMAZE-|-Honey-Co.-3-hsla { color: hsla(33, 39, 75, 1); }
+.AMAZE-|-Honey-Co.-4-hsla { color: hsla(28, 96, 38, 1); }
+.AMAZE-|-Honey-Co.-5-hsla { color: hsla(22, 96, 22, 1); }
+*/
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/*  */
+/* reset import */
+@import url(reset.css); 
+/* Css variables */
+:root{
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #F2A922;
+    --secondary: #732C02;
+    --accent: #BF5B04;
+    --black:#0d0d0d;
+
+    --fontFamily: 'Open Sans', sans-serif;
+
+    --fontHeaderSize: 2rem;
+    --fontSubSize: 1.125rem;
+    --fontTextSize: 1rem;
+    
+    
+    
+    --navBarGap: 10px;
+}
+
+body{
+    background-color: #474747fd;
+}
+
+.navBar{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    border-bottom: 3px solid var(--secondary);
+}
+
+.navBar__left{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: var(--navBarGap);
+}
+.logo{
+    font-family: var(--fontFamily);
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: var(--fontHeaderSize);
+    color: var(--primary);
+}
+
+.buttons {
+    display: flex;
+    gap: .5rem;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: var(--primary);
+    padding: .75rem 1rem ;
+    border: 1px solid #F2A922;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    font-size: var(--fontTextSize);
+    transition-duration: 500ms ;
+    transition-delay: 50ms;
+}
+
+
+.buttons a:hover{
+    transition-duration: 500ms ;
+    transition-delay: 100ms;
+    border: 1px solid var(--black);
+    background-color: #F2A922;
+    color: var(--black);
+}
