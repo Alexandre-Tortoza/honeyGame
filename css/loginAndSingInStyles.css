@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root{
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #F2A922;
+    --secondary: #732C02;
+    --accent: #BF5B04;
+    --black:#0d0d0d;
+
+    --fontFamily: 'Open Sans', sans-serif;
+
+    --fontHeaderSize: 2rem;
+    --fontSubSize: 1.125rem;
+    --fontTextSize: 1rem;
+    
+    
+    
+    --navBarGap: 10px;
+}
+
+body{
+    background-color: var(--black);
+    margin: auto;
+    max-width: 50%;    
+    text-align: center;
+    font-size: var(--fontHeaderSize);
+    text-transform: uppercase;
+    font-family: var(--fontFamily);
+}
+
+.loginForm{
+
+    background-color: white;
+    margin-top: 2rem;
+    border: 2px solid var(--accent);
+    box-shadow: 5px 5px 0px var(--primary);
+    padding: 0rem 2rem;
+}
+.loginForm form{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: auto;
+
+}
+
+.loginForm form input{
+    padding: 1rem;
+    margin: .5rem;
+    outline: none;
+    border: none;
+    border-bottom:2px solid var(--black);
+    font-size: var(--fontSubSize);
+}
+
+
+.loginForm form input:focus {
+    outline: none;
+    border-bottom:2px solid var(--accent);
+    /* box-shadow: 0 0 0 1px var(--primary); */
+    }  
+
+.line{
+    background-color: var(--primary);
+    height: 2px;
+    margin: 2.5rem;
+}
+
+button{
+    margin: 1rem;
+    padding: .8rem 2rem;
+    text-transform: uppercase;
+    font-size: var(--fontTextSize);
+    background: none;
+    transition-duration: 2s;
+    transition-delay: 5ms;
+    border: 2px solid var(--black);
+}
+button:active{
+    /* transition: ease-in; */
+    transition-duration: 1ms;
+    transition-delay: 1ms;
+    background-color: var(--primary);
+}
+
+span{
+    font-size: 1rem;
+}
+
+#altBnt{
+    transform: scale(50%);
+}
+
+.form__bentoBox{
+    display: flex;
+}
