@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Honey Game</title>
 <!-- Link & Imports -->
-    <link rel="stylesheet" href="../css/loginAndSingInStyles.css">
+    <link  rel="stylesheet" href="../css/loginAndSingInStyles.css">
+    <script src="../js/login.js"></script>
+    
 <!--  -->
 </head>
 <body>
@@ -16,9 +18,9 @@
             
 
             <form id="login">
-                <input type="email" name="email" id="emailLogIn" placeholder="Email">
+                <input type="email" name="email" id="emailLogin" placeholder="Email">
                 <input type="password" name="password" id="emailPassword" placeholder="Password">
-                <button>Login</button>
+                <button onclick="login()">Login</button>
             </form>
             <P>ou cadastre-se</P>
             <a href="signInPage.html"><button>Sign in</button></a>

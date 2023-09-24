@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Estilos para tornar os cards responsivos */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="cards-container"></div>
+
+<script>
+// Seu JSON de dados
+var jsonData = [
+  {
+    "titulo": "Título do Card 1",
+    "descricao": "Descrição do Card 1",
+    "imagem": "imagem1.jpg"
+  },
+  {
+    "titulo": "Título do Card 2",
+    "descricao": "Descrição do Card 2",
+    "imagem": "imagem2.jpg"
+  },
+  {
+    "titulo": "Título do Card 3",
+    "descricao": "Descrição do Card 3",
+    "imagem": "imagem3.jpg"
+  }
+];
+
+// Função para criar os cards a partir do JSON
+function criarCards() {
+  var container = document.getElementById("cards-container");
+
+  for (var i = 0; i < jsonData.length; i++) {
+    var card = document.createElement("div");
+    card.className = "card";
+
+    var imagem = document.createElement("img");
+    imagem.src = jsonData[i].imagem;
+
+    var containerTexto = document.createElement("div");
+    containerTexto.className = "container";
+
+    var titulo = document.createElement("h4");
+    titulo.textContent = jsonData[i].titulo;
+
+    var descricao = document.createElement("p");
+    descricao.textContent = jsonData[i].descricao;
+
+    containerTexto.appendChild(titulo);
+    containerTexto.appendChild(descricao);
+
+    card.appendChild(imagem);
+    card.appendChild(containerTexto);
+
+    container.appendChild(card);
+  }
+}
+
+// Chama a função para criar os cards assim que a página for carregada
+document.addEventListener("DOMContentLoaded", criarCards);
+</script>
+
+</body>
+</html>

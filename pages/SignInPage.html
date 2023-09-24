@@ -5,6 +5,7 @@
     <title>Honey Game</title>
 <!-- Link & Imports -->
     <link rel="stylesheet" href="../css/loginAndSingInStyles.css">
+    <script defer src="../js/singIn.js"></script>
 <!--  -->
 </head>
 <body>
@@ -14,18 +15,18 @@
             <div id="line"></div>
             <form id="signIn">
                 <div>
-                    <input type="text" name="nameSignIn" id="nameSignIn" placeholder="Nome completo">
+                    <input type="text" required name="nameSignIn" id="nameSignIn" placeholder="Nome completo">
                     <input type="date" name="birthDaySignIn" id="birthDateSignIn">
                 </div>
                 <div>
                     <input type="email" name="emailSignIn" id="emailSignIn" placeholder="Email">
-                    <input type="text" name="CPFSignIn" id="CPFSignIn" placeholder="CPF">
+                    <input type="text" required name="CPFSignIn" id="CPFSignIn" placeholder="CPF">
                 </div>
                 <div>
-                    <input type="password" name="passwordSingIn" id="passwordSingIn" placeholder="Senha">
-                    <input type="password" name="passwordConfSignIn" id="passwordConfSignIn" placeholder="Confirmar Senha">
+                    <input type="password" required name="passwordSingIn" id="passwordSingIn" placeholder="Senha">
+                    <input type="password" required name="passwordConfSignIn" id="passwordConfSignIn" placeholder="Confirmar Senha">
                 </div>
-                <button>Sign In</button>
+                <button type="button" onclick="signIn()">Sign In</button>
             </form>
             <P>ou faça login</P>
             <a href="loginPage.html"><button>Login</button></a>
