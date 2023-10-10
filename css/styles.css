@@ -1,4 +1,5 @@
 
+/* ---------------------------------------------------------------------------- */
 /*
 ### Color Theme Swatches in Hex
 .AMAZE-|-Honey-Co.-1-hex { color: #F2A922; }
@@ -22,12 +23,9 @@
 .AMAZE-|-Honey-Co.-5-hsla { color: hsla(22, 96, 22, 1); }
 */
 
-/* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-/*  */
-/* reset import */
 @import url(reset.css); 
-/* Css variables */
+/* ---------------------------------------------------------------------------- */
 :root{
     --text: #000000;
     --background: #ffffff;
@@ -35,6 +33,7 @@
     --secondary: #732C02;
     --accent: #BF5B04;
     --black:#0d0d0d;
+    --green: #4C6B22;;
 
     --fontFamily: 'Open Sans', sans-serif;
 
@@ -42,10 +41,9 @@
     --fontSubSize: 1.125rem;
     --fontTextSize: 1rem;
     
-    
-    
     --navBarGap: 10px;
 }
+/* ---------------------------------------------------------------------------- */
 
 body{
     background-color: #fdfdfd;
@@ -97,25 +95,18 @@ body{
     outline: #732C02;
 }
 
-/* .searchBar__inpu:focus > .searchBar{
-    outline: #F2A922 solid 1px;
-} */
-
-
-
-
 .buttons a{
     text-decoration: none;
     color: var(--primary);
-    padding: .75rem 1rem ;
+    padding: .5rem 1rem ;
     letter-spacing: 2px;
     font-size: var(--fontTextSize);
     transition-duration: 500ms ;
     transition-delay: 50ms;
-    border: 2px solid var(--primary);
+    border: 1px solid var(--primary);
+    font-size: 10px;
 
 }
-
 
 .buttons a:hover{
     transition-duration: 500ms ;
@@ -123,4 +114,89 @@ body{
     border: 2px solid var(--black);
     background-color: #F2A922;
     color: var(--black);
+}
+
+/*  RESPONSIVE */
+
+@media only screen and (max-width: 800px) {
+
+    .buttons {
+    display: none;
+    }
+    .searchBar{
+        display: none;
+    }
+    .navBar{
+        justify-content: center;
+    }
+    .logo h1{
+        display: none;
+    }
+}
+
+/* ------------------------------------------------------- */
+/* CARDS */
+
+.cards{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--black);
+    width: 18rem;
+    border: 1px solid var(--primary);
+    height: 18rem;
+
+    font-family: var(--fontFamily);
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    
+    
+}
+.card div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: .8rem;
+    height: 150px;
+}
+.card img{
+    max-width: 100%;
+}
+
+.card div h5{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.card div span{
+    color: var(--green);
+}
+.card div button{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--primary);
+    gap: 1rem;
+    padding: .5rem;
+    border: 1px  solid var(--black);
+    border-radius: 5px;
+    transition-delay: 200ms;
+    transition-duration: 1s;
+
+}
+
+.card div button:hover{
+    transition-delay: 0s;
+    transition-duration: 1s;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
 }
