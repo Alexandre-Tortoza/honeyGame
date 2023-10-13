@@ -33,7 +33,8 @@
     --secondary: #732C02;
     --accent: #BF5B04;
     --black:#0d0d0d;
-    --green: #4C6B22;;
+    --green: #4C6B22;
+    --blue: #4E9BCE;
 
     --fontFamily: 'Open Sans', sans-serif;
 
@@ -73,9 +74,14 @@ body{
     color: var(--primary);
 }
 
+.buttons img{
+    width: 2.5rem;
+}
+
 .buttons {
     display: flex;
-    gap: .5rem;
+    align-items: center;
+    gap: 2rem;
 }
 
 .searchBar{
@@ -199,4 +205,11 @@ body{
     transition-duration: 1s;
     border: 1px solid var(--primary);
     border-radius: 10px;
+}
+
+.card div button#alert{
+    color: var(--blue);
+}
+.card div button#alert:hover{
+    border: 1px solid var(--blue);
 }

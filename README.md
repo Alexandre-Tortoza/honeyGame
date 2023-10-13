@@ -46,5 +46,7 @@ Git do Projeto semestral de progamação Web.
 ## Sugestoes / Melhorias
 
 -------------------------------------------
-- Adicionar a logica no JS (index.js) para que no card quando o valor seja null (Jogo não lançado) ele troqeu o botão para um de lenbrete. 
-<!-- Uma sugestao para isso e transformar o botao um uma var, caso o valor do preco seja null ele troca essa var para uma onde o bnt seja o de lenbrete! -->
+
+- ~~Adicionar a logica no JS (index.js) para que no card quando o valor seja null (Jogo não lançado) ele troque o botão para um de lenbrete.~~ Por: Alex
+
+- ~~Uma sugestao para isso e transformar o botao um uma var, caso o valor do preco seja null ele troca essa var para uma onde o bnt seja o de lenbrete!~~ Por: Alex

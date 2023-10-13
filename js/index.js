@@ -8,8 +8,9 @@
 
 
 // document.addEventListener('DOMContentLoaded', function() {
-//     alert("Ready!");
-// }, false);
+//     alert("Ler !");
+// });
+
 
 fetch("php/cardRequest.php", {
     method: "GET"
@@ -21,11 +22,13 @@ fetch("php/cardRequest.php", {
             jogo[i].preco = "Free to play"
             var moeda = ""
         }else if(jogo[i].preco == null){
-            jogo[i].preco = "To be announced"
+            jogo[i].preco = "upcoming"
             var moeda = ""
+            var bnt = `<button id='alert'>Lembrete<img src="images/alert.svg" alt=""></button>`
         }
         else{
             var moeda ="R$"
+            var bnt = `<button onclick="cardAdd(${i})">Adicionar ao Carrinho <img src="images/shopping_cart.svg" alt=""></button>`
         }
         var conteudo = 
         `  
@@ -34,7 +37,7 @@ fetch("php/cardRequest.php", {
             <div>
                 <h5>${jogo[i].nome}</h5>
                 <span> ${moeda} ${jogo[i].preco}</span>
-                <button>Adicionar ao Carrinho <img src="images/shopping_cart.svg" alt=""></button>
+                ${bnt}
             </div>
         </div>
         `;
