@@ -294,23 +294,6 @@ body{
         margin-top: 15px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .popUp__List{
         display: flex;
         flex-direction: column;
@@ -346,6 +329,6 @@ body{
         border: none;
         border-radius: 10px;
         color: white;
-        padding: 2rem 1rem;
+        padding: .8rem 1rem;
     }
 /* ------------------------------------------------------- */

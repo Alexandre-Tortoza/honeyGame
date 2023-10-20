@@ -18,23 +18,28 @@ function cartAdd(index){
         alert("Produto já adicionado ao carrinho!")
         
     }else{
-
         cart.push(index);
-        // alert(cart);
-        // console.log(cart)
-        
+        // DEV
+        alert("ID dos intens Adicionados:\n" +cart);
+        console.log("ID dos intens Adicionados:\n" + cart)
+        // 
     
     }
 };
 
 function cartRemove(ID){
     for (let index = 0; index < cart.length; index++) {
+
+
+        // DEV
         console.log("--------")
         console.log(cart)
         console.log("--------")
         console.log(ID)
         console.log(cart[index])
         console.log("--------")
+        // 
+
         if(ID == cart[index]){
             console.log("Drop", cart[index])
             cart.splice(index, 1)
