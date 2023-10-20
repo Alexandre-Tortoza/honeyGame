@@ -82,3 +82,88 @@ document.addEventListener("DOMContentLoaded", criarCards);
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+var cartcontent = `
+<div id="popUp__all">
+    <div id="popUp">
+
+    <div class="popUp__top">
+        <h4>Meu Carrinho</h4>
+        <div id="closeBTN"><img onclick="popUpClose()" src="images/close.svg" alt=""></div>
+    </div>
+
+    <div class="popUp__Check">
+        <div>
+            <div>
+                <span>${cart.length}</span>
+                <span>- Itens adicionados</span>
+            </div>
+            <div>
+                <span>Valor estimado</span>
+                <span>R$ 200</span>
+            </div>
+        </div>
+        <div>
+            <button>Finalizar Compra!</button>
+        </div>
+    </div>
+    <div style="text-align: center;">Itens Adicionados</div>
+    <div class="hLine"></div>
+    <div class="popUp__List">
+
+        <div class="popUp__Iten">
+            <div><img src="images/blasphemous_2.png" alt=""></div>
+            <div>Nome do Jogo</div>
+            <div>valor</div>
+            <div>REMOVER</div>
+        </div>
+
+    </div>
+</div>
+<div id="popUpBG"></div>
+</div>
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var jogo = [
+//     {nome:"The Witcher III", preco:"129.99",img:"images/the_witcher_3.png"},
+//     {nome:"Twitter", preco:"159.00",img:"images/the_witcher_3.png"},
+//     {nome:"Twitter", preco:"159.00",img:"images/the_witcher_3.png"},
+    
+// ];
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     alert("Ler !");
+// });
+

@@ -43,6 +43,15 @@ Git do Projeto semestral de progamação Web.
 
 -------------------------------------------
 
+## Bug's
+
+-------------------------------------------
+
+- quando adiciona jogos F2P o carrinho quebra e adiciona outro jogo no lugar.
+
+
+-------------------------------------------
+
 ## Sugestoes / Melhorias
 
 -------------------------------------------
@@ -50,3 +59,5 @@ Git do Projeto semestral de progamação Web.
 - ~~Adicionar a logica no JS (index.js) para que no card quando o valor seja null (Jogo não lançado) ele troque o botão para um de lenbrete.~~ Por: Alex
 
 - ~~Uma sugestao para isso e transformar o botao um uma var, caso o valor do preco seja null ele troca essa var para uma onde o bnt seja o de lenbrete!~~ Por: Alex
+
+- Mais feedBack para o usuario (ao adicionar um produto ETC)

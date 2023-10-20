@@ -48,6 +48,7 @@
 
 body{
     background-color: #fdfdfd;
+
 }
 
 .navBar{
@@ -213,3 +214,138 @@ body{
 .card div button#alert:hover{
     border: 1px solid var(--blue);
 }
+
+/* ------------------------------------------------------- */
+
+/*  POP UP */
+
+    #popUpBG{
+        z-index:1;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 70%;
+        position: fixed;
+
+    }
+
+    #popUp{
+        font-family: var(--fontFamily);
+        z-index: 7;
+        background-color: var(--background);
+        border: 2px solid var(--primary);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40vw;
+        max-height: 50vh;
+        overflow-y: scroll;
+        gap: 1rem;
+        
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    #popUp::-webkit-scrollbar {
+        display: none;
+    }
+
+    .popUp__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .popUp__top *{
+        padding: 1rem;
+    }
+    .popUp__top h4{
+        font-size: var(--fontHeaderSize);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .popUp__Check{
+        margin: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .popUp__Check div *{
+        line-height: 1rem;
+    }
+
+    #check__itensAdded{
+        text-align: center;
+    }
+
+    .hLine{
+        background-color: var(--primary);
+        height: 1px;
+        width: 80%;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .popUp__List{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 2rem);
+        padding: 1rem;
+    }
+
+    .popUp__iten{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    #popUp__img img{
+        max-height: 4rem;
+        border-radius: 5px;
+        border: 1px solid var(--primary);
+
+    }
+
+    #popUp__resume *{
+        line-height: 25px;
+        font-weight: 500;
+    }
+    #totalPrice{
+        text-decoration: underline;
+    }
+
+    #popUp button{
+        background-color: var(--green);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        padding: 2rem 1rem;
+    }
+/* ------------------------------------------------------- */
