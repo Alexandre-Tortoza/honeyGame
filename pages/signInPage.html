@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Honey Game</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/signIn.js"></script>
+</head>
+<body>
+    <div class="formContainer">
+        <form id="signInForm">
+            <h5>Sign In</h5>
+            <div class="hLineSignIn"></div>
+
+            <div class=" inputContainer">
+                <div>
+                    <input type="text" id="signInName" placeholder="Nome Completo:" name="name">
+                    <input type="text" id="signInCPF" placeholder="CPF:" name="CPF">
+                </div>
+                <input type="email" id="signInEmail" placeholder="Email:" name="mail">
+                <div>
+                    <input type="password" id="signInPassqord" placeholder="Senha:" name="password">
+                    <input type="password" id="signInConfPassqord" placeholder="confirmar senha:" name="confPassword">
+                </div>
+            </div>
+            <button type="submit" onclick="signIn()">Confirmar</button>
+
+            <span>
+                Já é um usuario ?<br>
+                <a href="loginPage.html">Login</a>
+            </span>
+        </form>
+    </div>
+</body>
+</html>
