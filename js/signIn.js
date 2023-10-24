@@ -6,13 +6,13 @@ function signIn(){
 
 
     
+    
     status = verify()
     if (status == true){
         alert("Sign In !")
         sendData()
     }else{
         alert(verify())
-        sendData()
     }
 
     // throwError()
@@ -24,7 +24,7 @@ function sendData() {
     var form = document.getElementById('signInForm');
     var data =  new FormData(form);
 
-    fetch("php/signIn.php", {
+    fetch("../php/signIn.php", {
         method: 'POST',
         body: data
     });

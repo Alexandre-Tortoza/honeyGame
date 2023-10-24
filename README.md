@@ -65,3 +65,13 @@ Git do Projeto semestral de progamação Web.
 - Deve ser feito um campo no form de sign In para retornar o erro (O que esta de errado e em que campo esta o erro.)
 
 - Em singIn.js criar um função para verificar o email.
+
+- No PHP do sign IN : Adiconar um segunda verificação no servidor, e adicionar uma verificação para não ter como cadastrar email repitidos ou CPF
+
+- Avançar na parte "Privada" do site (contem o painel de admin)
+
+- ainda dentro da parte privada, um parte para aqueles sem o privilegio de admin poderem modificar seu perfil.(trocar o nome, aceitar uma data de nasc., uma foto de perfil)
+
+- o botão de finalizar compra deve levar para um pagina onde contem o carrinho (deve ser jogado no banco de dados) para finalização da compra.
+
+- quando excluimos um iten do carrinho ele fecha e abre de novo o popUp, procurar uma forma mais eficiente.

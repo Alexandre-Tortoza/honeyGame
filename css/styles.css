@@ -557,3 +557,9 @@ body{
     border-radius: 10px;
     padding: .25rem 1.5rem;
 }
+
+.backbnt__home {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+}
