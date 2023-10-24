@@ -5,21 +5,28 @@ function signIn(){
     // caso retorne FALSE, deve informar ao usuario onde se tem erros no cadastro
 
 
-    alert("Sign In !")
-
-    verify()
     
+    status = verify()
+    if (status == true){
+        alert("Sign In !")
+        sendData()
+    }else{
+        alert(verify())
+        sendData()
+    }
+
+    // throwError()
 
 }
 
 
-function gravar() {
+function sendData() {
     var form = document.getElementById('signInForm');
-    var dados =  new FormData(form);
+    var data =  new FormData(form);
 
     fetch("php/signIn.php", {
         method: 'POST',
-        body: dados
+        body: data
     });
 }
 
@@ -30,9 +37,33 @@ function verify(){
     var password= document.getElementById('signInPassqord').value;
     var confPassword = document.getElementById('signInConfPassqord').value;
 
-    console.log(name)
-    console.log(cPF)
-    console.log(email)
-    console.log(password)
-    console.log(confPassword)
+// Formatar CPF:
+cPF = cPF.replace(/\./g, '')
+cPF = cPF.replace(/\,/g, '')
+cPF = cPF.replace(/-/g, '')
+
+    if(name == "" || name == null){
+        return "Erro no campo nome"
+    }else if(cPF.length != 11){
+        return "Erro no campo CPF"
+
+    }else if(email == "" || email == null){
+        return "Erro no campo Email"
+
+    }else if(password != confPassword || password.length < 8){
+        return "As senha devem ser iguas e maiores que 8 digitos"
+    }
+    else{
+        return true
+    }
+
+
 }
+
+// function throwError(){
+//     var erro = `
+//     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, temporibus.</span>
+//     `
+//     document.getElementById('signInError').innerHTML += erro;
+// }
+

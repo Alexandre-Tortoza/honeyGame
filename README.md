@@ -61,3 +61,7 @@ Git do Projeto semestral de progamação Web.
 - ~~Uma sugestao para isso e transformar o botao um uma var, caso o valor do preco seja null ele troca essa var para uma onde o bnt seja o de lenbrete!~~ Por: Alex
 
 - Mais feedBack para o usuario (ao adicionar um produto ETC)
+
+- Deve ser feito um campo no form de sign In para retornar o erro (O que esta de errado e em que campo esta o erro.)
+
+- Em singIn.js criar um função para verificar o email.

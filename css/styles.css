@@ -34,6 +34,7 @@
     --accent: #BF5B04;
     --black:#0d0d0d;
     --green: #4C6B22;
+    --red: #ff4949;
     --blue: #4E9BCE;
 
     --fontFamily: 'Open Sans', sans-serif;
@@ -48,6 +49,7 @@
 
 body{
     background-color: #fdfdfd;
+    font-family: var(--fontFamily);
 
 }
 
@@ -441,7 +443,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 60%;
-    height: 60%;
+    height: 80%;
 
     border: 3px solid var(--black);
     box-shadow: 3px 3px 0px 1px var(--primary);
@@ -534,4 +536,24 @@ body{
     text-decoration: none;
     color: var(--primary);
 
+}
+
+#signInError{
+    
+    /* background-color: red;
+    width: 80%;
+    text-align: center;
+    padding: .25rem;
+    color: white;
+    border-radius: 5px; */
+    margin: 1rem;
+    
+}
+
+#signInError > *{
+    width: 100%;
+    background-color: var(--red);
+    color: white;
+    border-radius: 10px;
+    padding: .25rem 1.5rem;
 }
