@@ -6,7 +6,7 @@ Git do Projeto semestral de progamação Web.
 
 ## Objetivos
 
--------------------------------------------
+
 
 - Ao clicar em “Adicionar ao Carrinho” de algum card de algum produto, deverá adicionar no carrinho de compras (tabela do banco de dados).
 
@@ -24,7 +24,7 @@ Git do Projeto semestral de progamação Web.
 
 ## Paginas
 
--------------------------------------------
+
 
 > Geral
 >
@@ -45,7 +45,7 @@ Git do Projeto semestral de progamação Web.
 
 ## Bug's
 
--------------------------------------------
+
 
 - quando adiciona jogos F2P o carrinho quebra e adiciona outro jogo no lugar.
 
@@ -54,7 +54,7 @@ Git do Projeto semestral de progamação Web.
 
 ## Sugestoes / Melhorias
 
--------------------------------------------
+
 
 - ~~Adicionar a logica no JS (index.js) para que no card quando o valor seja null (Jogo não lançado) ele troque o botão para um de lenbrete.~~ Por: Alex
 
