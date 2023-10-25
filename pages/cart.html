@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar compra</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../js/cartPage.js"></script>
+</head>
+<body id="cartPage">
+    <div class="checkout">
+
+        <div class="checkout__products">
+            <h2>Produtos</h2>
+            <div class="products">
+                <div class="products__item">
+                    <img src="../images/blasphemous_2.png" alt="Jogo Capa" width="150px">
+                    <div>
+                        <span> Nome </span>
+                        <span> Presço </span>
+                    </div>
+                    <img src="../images/close.svg" alt="">
+                </div>
+                <div class="hLine"></div>
+                <br>
+
+            </div>
+
+            Total
+        </div>
+
+        <div class="checkout__charge">
+            <h2>Dados bancarios</h2>
+            <div>
+                
+                <div class="charge__card" >
+
+
+
+
+
+
+
+
+                    
+                    <div class="card__top">
+                        <span id="cardType">Cartão de Credito</span>
+                    </div>
+
+
+                    <div class="card__middle">
+                        <div id="cardNumber">
+                            **** **** **** ****
+                        </div>
+                    </div>
+
+
+                    <div class="card__bottom">
+                        <div class="bottom__left">
+                            <div>
+                                <div id="cardCVV">
+                                CVV
+                                </div> 
+                                <div id="cardValidity">
+                                    Validade
+                                </div>
+                            </div>
+
+                            <div id="cardCardholder">
+                                Titular 
+                            </div>
+
+                        </div>
+
+                        <div id="cardFlag">
+                            <img src="../images/mc_symbol.svg" alt="">
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="charge__form">
+                    <form>
+                        <div>
+                            <select id="cardType_T">
+                                <option value="Cartão de Credito" selected>Cartão de Credito</option>
+                                <option value="Cartão de Debito">Cartão de Debito</option>
+                            </select>
+                            <select id="cardFlag_T" >
+                                <option value="0" selected>Mastercard</option>
+                                <option value="1">Visa</option>
+                            </select>
+                        </div>
+                        <input type="text" id="cardNumber_T" placeholder="Num. cartão" maxlength="16">
+                        <input type="text" id="cardCVV_T" placeholder="CVV" maxlength="3">
+                        <input type="text" id="cardValidity_T" placeholder="Validade" maxlength="5">
+                        <input type="text" id="cardCardholder_T" placeholder="Titular" maxlength="30">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
