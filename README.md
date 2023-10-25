@@ -16,7 +16,7 @@ Git do Projeto semestral de progamação Web.
 
 - Somente poderá realizar uma compra, se estiver autenticado.
 
-- No menu, deverá ter mais duas opções para se cadastrar e se autenticar.
+- ~~No menu, deverá ter mais duas opções para se cadastrar e se autenticar.~~ Por: Alex
 
 - Deverá gravar as compras por usuário.
 
@@ -28,7 +28,7 @@ Git do Projeto semestral de progamação Web.
 
 > Geral
 >
->> - Produtos (Professor define template).
+>> - ~~Produtos (Professor define template).~~ Por: Alex
 >> - Carrinho (Estudantes definem template).
 >> - Finalizar Compra (Estudantes definem template).
 >> - Deverá ser mostrado todos os produtos, preço unitário de cada um e preço total da compra. Deverá possibilitar realizar compra por cartão de crédito, débito ou pix (qrcode).
