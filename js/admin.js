@@ -16,3 +16,4 @@ function upload() {
     })
     .catch(error => console.error(error));
 }
+
