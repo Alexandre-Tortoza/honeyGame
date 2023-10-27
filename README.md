@@ -1,8 +1,7 @@
-# Progamaca-web__projetoSemestral-honeyGame
+# Honey Game
 
-Git do Projeto semestral de progamação Web.
 
--------------------------------------------
+---
 
 ## Objetivos
 
@@ -12,7 +11,7 @@ Git do Projeto semestral de progamação Web.
 
 - Os produtos deverão vir de uma tabela do banco de  dados. Os produtos do carrinho, também deverá ser gravado no banco de dados em uma tabela de Carrinho de Compras
 
-- Responsividade
+- Responsividadehttps://github.com/Alexandre-Tortoza/programacao-web__PucPR
 
 - Somente poderá realizar uma compra, se estiver autenticado.
 
@@ -20,28 +19,31 @@ Git do Projeto semestral de progamação Web.
 
 - Deverá gravar as compras por usuário.
 
--------------------------------------------
+---
 
 ## Paginas
 
 
 
-> Geral
+>*Geral:*
 >
 >> - ~~Produtos (Professor define template).~~ Por: Alex
+>>
 >> - Carrinho (Estudantes definem template).
+>>
 >> - Finalizar Compra (Estudantes definem template).
+>>
 >> - Deverá ser mostrado todos os produtos, preço unitário de cada um e preço total da compra. Deverá possibilitar realizar compra por cartão de crédito, débito ou pix (qrcode).
-
-## Administrador
-
-> Cadastrar Produto (Estudantes definem template)
+>
+> *Administrador* (*Cadastrar Produto*): 
 >
 >> - Deverá cadastrar os produtos no banco de dados, para que possam servisualizados na página de Produtos.
 >> - Excluir Produto (Estudantes definem template)
 >> - Deverá possibilitar excluir um produto no banco de dados
 
--------------------------------------------
+<br>
+
+---
 
 ## Bug's
 
@@ -50,7 +52,7 @@ Git do Projeto semestral de progamação Web.
 - quando adiciona jogos F2P o carrinho quebra e adiciona outro jogo no lugar.
 
 
--------------------------------------------
+---
 
 ## Sugestoes / Melhorias
 
@@ -75,3 +77,5 @@ Git do Projeto semestral de progamação Web.
 - o botão de finalizar compra deve levar para um pagina onde contem o carrinho (deve ser jogado no banco de dados) para finalização da compra.
 
 - quando excluimos um iten do carrinho ele fecha e abre de novo o popUp, procurar uma forma mais eficiente.
+
+---
