@@ -14,6 +14,7 @@
         
         move_uploaded_file($arquivo["tmp_name"], $novo_endereco);
         $conection__db = mysqli_connect('localhost:3306', 'root', 'C0x1nh4123','honeygame__db');
+        $receber = mysqli_query($conection__db, "SELECT ID_jogos FROM jogo");
         $query = "INSERT INTO jogo (nome, preco, descricao) VALUES ('$nome','$preco','$descricao')";
         mysqli_query($conection__db, $query);
 

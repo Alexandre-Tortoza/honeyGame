@@ -17,3 +17,15 @@ function upload() {
     .catch(error => console.error(error));
 }
 
+async function deletar(){
+    
+    var nome_id = document.getElementById("id").value;
+    var dados = new FormData();
+    dados.append('id', nome_id);
+
+    var apagar = await fetch('../php/apagar.php', {
+        method: 'POST',
+        body: dados
+    });
+
+}
