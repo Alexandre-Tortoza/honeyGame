@@ -15,14 +15,14 @@ if (jogo == null){
 
 function cartAdd(index){
     if(cart.includes(index)){
-        alert("Produto já adicionado ao carrinho!")
-        
+        alertPopUp(1) 
     }else{
         cart.push(index);
         // DEV
-        alert("ID dos intens Adicionados:\n" +cart);
-        console.log("ID dos intens Adicionados:\n" + cart)
+        // alert("ID dos intens Adicionados:\n" + cart);
+        // console.log("ID dos intens Adicionados:\n" + cart)
         // 
+        alertPopUp(2) 
     
     }
 };
@@ -54,7 +54,7 @@ function cartRemove(ID){
 function cartShow(){
 
     if(cart == ""){
-        // alert("Carrinho vazio!")
+        alertPopUp(0)
     }else{
         var cartcontent = `
         <div id="popUp__all">
@@ -77,7 +77,7 @@ function cartShow(){
                         </div>
                     </div>
                     <div>
-                        <button>Finalizar Compra!</button>
+                    <button onclick="cartSend()">Finalizar Compra!</button>
                     </div>
                 </div>
                 <div id='check__itensAdded'>
@@ -160,9 +160,92 @@ function cartShow(){
 
 
 
-
+function cartSend(){
+    window.location.href = './pages/cart.html';
+};
 function popUpClose() {
-    // alert("Close popUp!")
     var remove = document.getElementById("popUp__all");
     remove.parentNode.removeChild(remove);
+};
+
+function alertPopUp(type) {
+// Type 0 == Error
+// type 1 == product already added to cart
+// type 2 == product added to cart
+
+
+    if (type == 0){
+        
+        var alertPopUp = `
+        
+        <div id="alertBox" class="alertBox" style="background-color: var(--red);">
+            <span>Seu carrinho esta vazio!</span>
+        </div>
+        
+        `
+        document.body.innerHTML += alertPopUp;
+        setTimeout(function () {
+            var remove = document.getElementById("alertBox");
+
+//  Efeito de Fade na Opacidade da DIV:
+
+        // let opacidade = 0;
+        // const alvoOpacidade = 1;
+        // const incremento = 0.01; 
+        // while (opacidade <= alvoOpacidade){
+        //     opacidade += incremento;
+        //     remove.style.opacity = opacidade;
+        // };
+        remove.parentNode.removeChild(remove);
+        }, 3000);
+    }else if(type == 1 ){
+        
+        var alertPopUp = `
+        
+        <div id="alertBox" class="alertBox" style="background-color: var(--red);">
+            <span>Este jogo já está em seu carrinho</span>
+        </div>
+        
+        `
+        document.body.innerHTML += alertPopUp;
+        setTimeout(function () {
+            var remove = document.getElementById("alertBox");
+
+//  Efeito de Fade na Opacidade da DIV:
+
+        // let opacidade = 0;
+        // const alvoOpacidade = 1;
+        // const incremento = 0.01; 
+        // while (opacidade <= alvoOpacidade){
+        //     opacidade += incremento;
+        //     remove.style.opacity = opacidade;
+        // };
+        remove.parentNode.removeChild(remove);
+        }, 3000);
+    }
+    else if(type == 2 ){
+        
+        var alertPopUp = `
+        
+        <div id="alertBox" class="alertBox" style="background-color: var(--green);">
+            <span>Jogo adicionado ao carrinho</span>
+        </div>
+        
+        `
+        document.body.innerHTML += alertPopUp;
+        setTimeout(function () {
+            var remove = document.getElementById("alertBox");
+
+//  Efeito de Fade na Opacidade da DIV:
+
+        // let opacidade = 0;
+        // const alvoOpacidade = 1;
+        // const incremento = 0.01; 
+        // while (opacidade <= alvoOpacidade){
+        //     opacidade += incremento;
+        //     remove.style.opacity = opacidade;
+        // };
+        remove.parentNode.removeChild(remove);
+        }, 3000);
+    }
 };

@@ -55,7 +55,7 @@ const cValidity = function(e) {
 
 const cCardholder = function(e) {
     if(cardCardholder_T.value ==""){
-        cardValidity.innerText = "Titular"
+        cardCardholder.innerText = "Titular"
     }else{
         cardCardholder.innerText = cardCardholder_T.value
     }
@@ -70,11 +70,15 @@ const cType = function(e) {
 }
 
 const cFlag = function(e) {
-    // if(cardFlag_T.value == "0"){
-    //     cardFlag.innerHTML = `
-    //         <img src="../images/mc_symbol.svg" alt=""></img>
-    //     `;
-    // }
+    if(cardFlag_T.value == "0"){
+        cardFlag.innerHTML = `
+            <img width="80px" src="../images/mc_symbol.svg" alt="Master Card">
+        `;
+    }else if (cardFlag_T.value == "1"){
+        cardFlag.innerHTML = `
+            <img width="80px" src="../images/visa-10.svg" alt="Visa Card">
+        `;
+    }
     
 }
 cardNumber_T.addEventListener('input', cNumber);
