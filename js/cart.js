@@ -114,9 +114,10 @@ function cartAdd(index) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var response = xhr.responseText;
             if (response === "added") {
-                alertPopUp(2)
                 cart.push(index)
-            } else {
+                console.log(cart)
+                alertPopUp(2)
+            } else if(response === "exists") {
                 alertPopUp(1)
             }
         }
@@ -129,20 +130,53 @@ function cartAdd(index) {
 }
 
 
-function cartRemove(ID){
-    for (let index = 0; index < cart.length; index++) {
+function cartRemove(ID) {
+    console.log("remove Bnt action")
+    console.log(cart)
 
-        if(ID == cart[index]){
-            console.log("Drop", cart[index])
-            cart.splice(index, 1)
-            console.log(cart)
-            popUpClose()
-            cartShow()
+
+    for (var index = cart.length; index >= 0; index--) {
+
+        if (ID == cart[index]) {
+        console.log("Drop", cart[index]);
+        cart.splice(index, 1);
+        cartRemoveDB(ID)
+
+
+
         }
     }
-    // deve remover o valor de ID do coluna ID_jogos do banco de dados
 
-};
+    popUpClose();
+    cartShow();
+}
+
+function cartRemoveDB(ID) {
+    // Crie uma instância do objeto XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+
+    // Configure a solicitação para enviar para o arquivo PHP que lidará com a remoção
+    xhr.open("POST", "php/removeCart.php", true);
+
+    // Defina o cabeçalho da solicitação para enviar dados no formato x-www-form-urlencoded
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Defina a função de retorno de chamada para tratar a resposta do servidor
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+        // Aqui você pode tratar a resposta do servidor, se necessário
+        console.log(xhr.responseText);
+        }
+    };
+
+    // Crie os dados a serem enviados, no formato apropriado (neste exemplo, usando JSON)
+    var data = "ID=" + ID;
+
+    // Envie a solicitação
+    xhr.send(data);
+}
+
+
 
 function popUpClose() {
     var remove = document.getElementById("popUp__all");
