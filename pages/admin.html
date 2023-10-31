@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <script defer src="../js/admin.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <input type="file" id="arquivo"/><br><br>
+<body id="adminBody">
+    <div class="containerAdm">
 
-    
-    <!-- Div para exibir a mensagem -->
-    <div id="mensagem"></div>
-    <form id="formulario">
-        <input type="text" name="nome" placeholder="Nome do jogo"/></br>
-        <input type="number" name="preco" placeholder="preço do jogo"/></br>
-        <input type="text" name="genero" placeholder="genero do jogo"/></br>
-        <button type="button" onclick="upload()">salvar</button><br>
-    </form>
-
-    <div class="card-delete">
-        <div>Delete o produto abaixo:</div>
-    
-        </div>
-            
-        <div class="idProduto">
-            <input id="id" type="number" name="id" placeholder="ID do produto" /><br><br>
+        <div class="fileInput">
+            <label for="arquivo">Selecionar arquivo</label>
+            <input type="file" id="arquivo">
         </div>
 
-        <div">
-            <button onclick="deletar()">Deletar</button><br>
-        </div>
 
+        <!-- Div para exibir a mensagem -->
+        <div id="mensagem"></div>
+        <form id="formulario__Adm">
+            <input type="text" name="nome" placeholder="Nome do jogo"/>
+            <input type="number" name="preco" placeholder="preço do jogo"/>
+            <input type="text" name="genero" placeholder="genero do jogo"/>
+            <button type="button" onclick="upload()">salvar</button>
+        </form>
+        <br>
+        <div class="card-delete">
+            <div>Delete o produto abaixo:</div>
+            <br>
+
+            </div>
+                
+            <div class="idProduto">
+                <input id="id" type="number" name="id" placeholder="ID do produto" />
+            </div>
+            <br>
+            <div>
+                <button onclick="deletar()" id="deleteBNT">Deletar</button>
+            </div>
+            <br>
+            <a href="../index.html">Pagina Inicial</a>
+        </div>
     </div>
 </body>
 </html>

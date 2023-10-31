@@ -37,3 +37,20 @@ window.onload = async function() {
         }
 };
 
+// ------------------------------------------------
+
+function menuShow(){
+    var menu = `
+        <div class="mobileMenu__menu">
+            <img width="25px" src="images/close.svg" alt="close Menu" onclick="menuClose()">
+            <div>
+                <img width="40px" onclick="cartShow()" id="cartIcon" src="images/cart.svg"  alt="carrinho de compra">                        </div>
+                <a href="pages/loginPage.html">Login</a>                        </div>
+        <div id="popUpBG"></div>
+    `
+    document.getElementById('menuContainer').innerHTML +=menu
+}
+function menuClose(){
+
+    document.getElementById('menuContainer').innerHTML =""
+}

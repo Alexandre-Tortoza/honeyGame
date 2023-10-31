@@ -18,12 +18,7 @@ function cartAdd(index){
         alertPopUp(1) 
     }else{
         cart.push(index);
-        // DEV
-        // alert("ID dos intens Adicionados:\n" + cart);
-        // console.log("ID dos intens Adicionados:\n" + cart)
-        // 
         alertPopUp(2) 
-    
     }
 };
 
@@ -52,7 +47,7 @@ function cartRemove(ID){
 
 
 function cartShow(){
-
+    document.getElementById('menuContainer').innerHTML =""
     if(cart == ""){
         alertPopUp(0)
     }else{
@@ -135,32 +130,15 @@ function cartShow(){
 
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function cartSend(){
+    var cart =[]
+    var jogoId = cart;
+    var data = new FormData();
+
+    fetch("php/cart/sendCartDB.php", {
+        method: 'POST',
+        body: data
+    });
     window.location.href = './pages/cart.html';
 };
 function popUpClose() {
