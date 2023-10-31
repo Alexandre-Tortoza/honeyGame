@@ -737,11 +737,15 @@ to {ransform: translatex(0%);}
 }
 
 @media only screen and (max-width: 800px){
-
+    
 
     .checkout{
-        max-width: 90%;
+        max-width: 70%;
     }
+    .products__item img{
+        max-width: 100px;
+    }
+
 }
 
 /* ------------------------------------------------------- */
@@ -846,6 +850,25 @@ to {ransform: translatex(0%);}
     transition-delay: 200ms;
     transition-duration: 1s;
 }
+
+
+@media only screen and (max-width: 800px){
+    
+    .checkout__charge{
+
+    }
+
+    .checkout__charge div:nth-child(2){
+        flex-direction: column;
+    }
+    .charge__card{
+        width: 80%;
+    }
+    .charge__form {
+        width: 80%;
+    }
+}
+
 /* ------------------------------------------------------- */
 /* Admin */
 
