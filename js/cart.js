@@ -1,70 +1,28 @@
-var cart=[];
+cart=[]
 
-
-var jogo;
-if (jogo == null){
-    async function gamesDb() {
-        var promise = await fetch("php/cardRequest.php",{
-            method: "GET"
-        })
-        jogo = await promise.json();
-    
-    };
-    gamesDb()
-}
-
-function cartAdd(index) {
-    // Verifica se o índice já está no carrinho no lado do cliente
-    if (cart.includes(index)) {
-        alertPopUp(1);
-    } else {
-        // Se não estiver no carrinho, envie uma solicitação ao servidor PHP para verificar no banco de dados
-        checkIfIdExistsInDatabase(index);
-    }
-}
-
-function cartRemove(ID) {
-    // Envia uma solicitação AJAX para o servidor PHP para remover o ID do banco de dados
-    removeIdFromDatabase(ID);
-}
-
-function removeIdFromDatabase(ID) {
-    // Crie uma instância XMLHttpRequest para enviar a solicitação
+function loadCartData() {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/remove_id.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    
-    // Define a função de callback para lidar com a resposta do servidor
+    xhr.open("GET", "php/loadCartData.php", true);
+
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            var response = xhr.responseText;
-            if (response === "success") {
-                // A remoção no banco de dados foi bem-sucedida, agora você pode remover o ID do array cart
-                removeIdFromArray(ID);
-            }
+            var responseData = JSON.parse(xhr.responseText);
+            cart = responseData;
+            console.log("Cart data loaded:", cart);
         }
     };
-    
-    // Envie o ID para o servidor para remoção
-    xhr.send("jogoId=" + ID);
+
+    xhr.send();
 }
 
-function removeIdFromArray(ID) {
-    // Encontre o índice do ID no array cart e remova-o
-    var index = cart.indexOf(ID);
-    if (index !== -1) {
-        cart.splice(index, 1);
-    }
-    // Agora você pode chamar outras funções, como atualizar a exibição do carrinho
-    console.log("Drop", ID);
-    console.log(cart);
-    popUpClose();
-    cartShow();
-}
+loadCartData();
+
+// ----------------------------------------------------------
+//  PopUp Cart
 
 
 function cartShow(){
-    document.getElementById('menuContainer').innerHTML =""
+
     if(cart == ""){
         alertPopUp(0)
     }else{
@@ -147,22 +105,53 @@ function cartShow(){
 
 };
 
-function cartSend(){
-    var cart =[]
-    var jogoId = cart;
-    var data = new FormData();
+function cartAdd(index) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/cartAdd.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-    fetch("php/cart/sendCartDB.php", {
-        method: 'POST',
-        body: data
-    });
-    window.location.href = './pages/cart.html';
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = xhr.responseText;
+            if (response === "added") {
+                alertPopUp(2)
+                cart.push(index)
+            } else {
+                alertPopUp(1)
+            }
+        }
+    };
+
+    // Prepare the data to send
+    var data = "index=" + index;
+
+    xhr.send(data);
+}
+
+
+function cartRemove(ID){
+    for (let index = 0; index < cart.length; index++) {
+
+        if(ID == cart[index]){
+            console.log("Drop", cart[index])
+            cart.splice(index, 1)
+            console.log(cart)
+            popUpClose()
+            cartShow()
+        }
+    }
+    // deve remover o valor de ID do coluna ID_jogos do banco de dados
+
 };
+
 function popUpClose() {
     var remove = document.getElementById("popUp__all");
     remove.parentNode.removeChild(remove);
 };
 
+
+// -----------------------------------------
+// PopUp
 function alertPopUp(type) {
 // Type 0 == Error
 // type 1 == product already added to cart
@@ -244,33 +233,3 @@ function alertPopUp(type) {
         }, 3000);
     }
 };
-
-
-
-
-
-
-
-function checkIfIdExistsInDatabase(index) {
-    // Envia uma solicitação AJAX para o servidor PHP
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/check_id.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    
-    // Define a função de callback para lidar com a resposta do servidor
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var response = xhr.responseText;
-            if (response === "exists") {
-                alertPopUp(1); // O ID já existe no banco de dados
-            } else if (response === "not_exists") {
-                // O ID não existe no banco de dados, então podemos adicioná-lo ao carrinho
-                cart.push(index);
-                alertPopUp(2);
-            }
-        }
-    };
-    
-    // Envie o ID para o servidor para verificação
-    xhr.send("jogoId=" + index);
-}
