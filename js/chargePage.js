@@ -1,6 +1,8 @@
 
 cart=[]
 total = 0;
+const cartDiv = document.getElementById('products')
+
 window.onload = async function() {
 
 function loadCartData() {
@@ -28,37 +30,29 @@ console.log(cart)
     })
     jogo = await promise.json();
 
-    function cartLoad(){
-        for (var i = 0; i < jogo.length; i++) {
-        
-            var conteudo =`
-                <div class="products__item">
-                    <img src="../images/${jogo[i].img}" alt="Jogo Capa" width="150px">
-                    <div>
-                        <span> ${jogo[i].nome} </span>
-                        <span>R$ ${jogo[i].preco} </span>
-                    </div>
-                    <img src="../images/close.svg" alt="" onclick="cartRemove(${jogo[i].ID_jogos})">
-                </div>
-                <div class="hLine"></div>
-                <br>
-        `;
+
+    for (var i = 0; i < jogo.length; i++) {
     
+        var conteudo =`
+            <div class="products__item">
+                <img src="../images/${jogo[i].img}" alt="Jogo Capa" width="150px">
+                <div>
+                    <span> ${jogo[i].nome} </span>
+                    <span>R$ ${jogo[i].preco} </span>
+                </div>
+                <img src="../images/close.svg" alt="" onclick="cartRemove(${jogo[i].ID_jogos})">
+            </div>
+            <div class="hLine"></div>
+            <br>
+        `;  
+
         if(cart.includes(jogo[i].ID_jogos)){
             total = total + parseFloat(jogo[i].preco)
             document.getElementById('products').innerHTML += conteudo;
             document.getElementById('totalCharge').innerHTML = total.toFixed(2);
-        }
-    
-    
-        
-        }
+        }  
     }
-cartLoad()
 
-
-
-console.log(cart)
 
 }
 
@@ -75,14 +69,12 @@ function cartRemove(ID) {
     }
     if(cart == ""){
         window.location.href = '../index.html';
-        verificarElementoVazio()
-        document.getElementById('products').innerHTML = "";
-        cartLoad()
-        window.location.reload()
-        alert("a")
-        // setTimeout(100,window.location.reload())
     }
+    verificarElementoVazio()
 
+        window.location.reload()
+        // setTimeout(100,window.location.reload())
+        verificarElementoVazio()
     
 }
 function cartRemoveDB(ID) {
@@ -107,5 +99,11 @@ function verificarElementoVazio() {
     var elemento = document.getElementById("products");
     if (elemento.innerHTML.trim() === "") {
         window.location.href = "../index.html";
+    }
+}
+
+const cartDivF = function() {
+    if(cartDiv.value == ""){
+        cartDiv.innerText = "**** **** **** ****"
     }
 }
