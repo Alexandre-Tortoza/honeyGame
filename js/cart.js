@@ -183,6 +183,20 @@ function popUpClose() {
     remove.parentNode.removeChild(remove);
 };
 
+function cartSend(){function cartSend(){
+    window.location.href = './pages/cart.html';
+};
+function popUpClose() {
+    var remove = document.getElementById("popUp__all");
+    remove.parentNode.removeChild(remove);
+};
+
+    window.location.href = './pages/cart.html';
+};
+function popUpClose() {
+    var remove = document.getElementById("popUp__all");
+    remove.parentNode.removeChild(remove);
+};
 
 // -----------------------------------------
 // PopUp
@@ -205,15 +219,6 @@ function alertPopUp(type) {
         setTimeout(function () {
             var remove = document.getElementById("alertBox");
 
-//  Efeito de Fade na Opacidade da DIV:
-
-        // let opacidade = 0;
-        // const alvoOpacidade = 1;
-        // const incremento = 0.01; 
-        // while (opacidade <= alvoOpacidade){
-        //     opacidade += incremento;
-        //     remove.style.opacity = opacidade;
-        // };
         remove.parentNode.removeChild(remove);
         }, 3000);
     }else if(type == 1 ){
@@ -229,15 +234,6 @@ function alertPopUp(type) {
         setTimeout(function () {
             var remove = document.getElementById("alertBox");
 
-//  Efeito de Fade na Opacidade da DIV:
-
-        // let opacidade = 0;
-        // const alvoOpacidade = 1;
-        // const incremento = 0.01; 
-        // while (opacidade <= alvoOpacidade){
-        //     opacidade += incremento;
-        //     remove.style.opacity = opacidade;
-        // };
         remove.parentNode.removeChild(remove);
         }, 3000);
     }
@@ -254,15 +250,6 @@ function alertPopUp(type) {
         setTimeout(function () {
             var remove = document.getElementById("alertBox");
 
-//  Efeito de Fade na Opacidade da DIV:
-
-        // let opacidade = 0;
-        // const alvoOpacidade = 1;
-        // const incremento = 0.01; 
-        // while (opacidade <= alvoOpacidade){
-        //     opacidade += incremento;
-        //     remove.style.opacity = opacidade;
-        // };
         remove.parentNode.removeChild(remove);
         }, 3000);
     }

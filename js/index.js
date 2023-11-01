@@ -21,7 +21,7 @@ window.onload = async function() {
             else{
                 var moeda ="R$"
                 var bnt = `<button onclick="cartAdd(${jogo[i].ID_jogos})">Adicionar ao Carrinho <img src="images/shopping_cart.svg" alt=""></button>`
-            }jogo
+            }
             var conteudo = 
             `  
             <div class="card">
@@ -44,7 +44,7 @@ function menuShow(){
         <div class="mobileMenu__menu">
             <img width="25px" src="images/close.svg" alt="close Menu" onclick="menuClose()">
             <div>
-                <img width="40px" onclick="cartShow()" id="cartIcon" src="images/cart.svg"  alt="carrinho de compra">                        </div>
+                <img width="40px" onclick="cartShow(),menuClose()" id="cartIcon" src="images/cart.svg"  alt="carrinho de compra">                        </div>
                 <a href="pages/loginPage.html">Login</a>                        </div>
         <div id="popUpBG"></div>
     `
