@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `honeygame__db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `honeygame__db`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: honeygame__db
@@ -28,10 +30,9 @@ CREATE TABLE `user` (
   `CPF` varchar(45) DEFAULT NULL,
   `Email` varchar(45) DEFAULT NULL,
   `Password` varchar(45) DEFAULT NULL,
-  `admin` tinyint(1) NOT NULL,
   PRIMARY KEY (`ID_user`),
   UNIQUE KEY `ID_user_UNIQUE` (`ID_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +41,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (5,'Alex','12345678900','Alex@teste.com','Admin',1),(6,'Carlinhps','00100200399','Carlos@emial.com','batatas',0);
+INSERT INTO `user` VALUES (0,'Alex','12345678900','Alex@teste.com','Admin'),(1,'Carlinhos','00100200399','Carlos@emial.com','batatas'),(2,'Vitor','12332145698','Vitor@email.br','123123123');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-24 19:58:28
+-- Dump completed on 2023-10-31 21:49:56

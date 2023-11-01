@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `honeygame__db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `honeygame__db`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: honeygame__db
@@ -39,7 +41,7 @@ CREATE TABLE `jogo` (
 
 LOCK TABLES `jogo` WRITE;
 /*!40000 ALTER TABLE `jogo` DISABLE KEYS */;
-INSERT INTO `jogo` VALUES (1,'The Witcher III','129.99','RPG','the_witcher_3.png'),(2,'Cyberpunk 2077','199,90','RPG','cyberpunk_2077.png'),(3,'Metro Exodus','149,00','FPS','metro_exodus.png'),(85,'DARK SOULS','154.90',NULL,'dark_souls.png'),(86,'Monster Hunter','99.90',NULL,'monster_hunter.png'),(87,'Terraria','19.99',NULL,'terraria.png'),(88,'Project Zomboid','59.99',NULL,'project_zomboid.png'),(89,'Counter-Strike 2','00',NULL,'counter_strike_2.png'),(90,'Fable Anniversary','63.99',NULL,'fable_anniversary.png'),(91,'Dragon\'s Dogma 2',NULL,NULL,'dragons_dogma_2.png'),(92,'Celeste','36.99',NULL,'celeste.png'),(93,'Blasphemous 2','109.00',NULL,'blasphemous_2.png');
+INSERT INTO `jogo` VALUES (1,'The Witcher III','129.99','RPG','1.png'),(2,'Cyberpunk 2077','199,90','RPG','2.png'),(3,'Metro Exodus','149,00','FPS','3.png'),(4,'DARK SOULS','154.90',NULL,'4.png'),(5,'Monster Hunter','99.90',NULL,'5.png'),(6,'Terraria','19.99',NULL,'6.png'),(7,'Project Zomboid','59.99',NULL,'7.png'),(8,'Counter-Strike 2','00',NULL,'8.png'),(9,'Fable Anniversary','63.99',NULL,'9.png'),(10,'Dragon\'s Dogma 2',NULL,NULL,'10.png'),(11,'Celeste','36.99',NULL,'11.png'),(12,'Blasphemous 2','109.00',NULL,'12.png');
 /*!40000 ALTER TABLE `jogo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-24 19:58:28
+-- Dump completed on 2023-10-31 21:49:56
