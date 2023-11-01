@@ -1,7 +1,6 @@
 
 cart=[]
 total = 0;
-const cartDiv = document.getElementById('products')
 
 window.onload = async function() {
 
@@ -67,15 +66,12 @@ function cartRemove(ID) {
         cartRemoveDB(ID)
         }
     }
-    if(cart == ""){
+    if(cart.length == 0){
         window.location.href = '../index.html';
     }
     verificarElementoVazio()
-
-        window.location.reload()
-        // setTimeout(100,window.location.reload())
-        verificarElementoVazio()
-    
+    window.location.reload()
+        
 }
 function cartRemoveDB(ID) {
     var xhr = new XMLHttpRequest();
@@ -91,19 +87,9 @@ function cartRemoveDB(ID) {
 
 }
 
-
-
-
-
 function verificarElementoVazio() {
     var elemento = document.getElementById("products");
     if (elemento.innerHTML.trim() === "") {
         window.location.href = "../index.html";
-    }
-}
-
-const cartDivF = function() {
-    if(cartDiv.value == ""){
-        cartDiv.innerText = "**** **** **** ****"
     }
 }
