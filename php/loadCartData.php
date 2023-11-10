@@ -1,5 +1,5 @@
 <?php
-$conection__db = mysqli_connect('localhost:3308', 'root', 'admin', 'honeygame__db');
+$conection__db = mysqli_connect('localhost:3306', 'root', 'C0x1nh4123', 'honeygame__db');
 $resultado = mysqli_query($conection__db, "SELECT ID_jogos FROM carrinho");
 
 $cart = array();

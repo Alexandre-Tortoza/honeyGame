@@ -19,11 +19,12 @@ if ($arquivo["type"] == "image/png") {
 
     $ultimo_id_inserido = mysqli_insert_id($conection__db);
 
-    // Renomear o arquivo com o ID do jogo
+    // Renomear o arquivo com o ID do jogo  
     $novo_nome_arquivo = $ultimo_id_inserido . ".png";
     $novo_endereco_com_id = "../images/" . $novo_nome_arquivo;
     rename($novo_endereco, $novo_endereco_com_id);
-
+    $update_query = "UPDATE jogo SET img = '$novo_nome_arquivo' WHERE ID_jogos = $ultimo_id_inserido";
+    mysqli_query($conection__db, $update_query);
 } else {
     $mensagem = "O arquivo deve obrigatoriamente ser um PNG";
 }
