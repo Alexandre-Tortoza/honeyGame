@@ -67,3 +67,4 @@
 - quando excluimos um iten do carrinho ele fecha e abre de novo o popUp, procurar uma forma mais eficiente.
 
 ---
+# proj001
